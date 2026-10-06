@@ -12308,10 +12308,19 @@
       color: #fff;
     }
 
-    .support-ticket-id {
-      font-size: 13px;
-    }
+.support-ticket-id {
+    font-size: 13px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    width: 50%;
+}
 
+.support-ticket-id.text-end {
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: normal;
+}
     .support-ticket-status {
       font-size: 16px;
       font-weight: 700;
@@ -12444,7 +12453,8 @@
       fill: #fff !important;
     }
 
-    .security-cont>div:nth-child(2) svg path:last-child,.wall-set-icon>div:nth-child(2) svg path:last-child {
+    .security-cont>div:nth-child(2) svg path:last-child,
+    .wall-set-icon>div:nth-child(2) svg path:last-child {
       fill: #000 !important;
     }
 
