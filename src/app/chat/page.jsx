@@ -8,7 +8,8 @@ export default function ChatPage() {
   return (
     <div className="chat-page">
       <Container className="chat-container">
-        <div className="chat-header">
+        <div>
+          <div className="chat-header">
           <div className="chat-id">#UI5658178</div>
           <div className="chat-status-pill">
             <span className="chat-status-dot" />
@@ -52,6 +53,7 @@ export default function ChatPage() {
               <div className="chat-text">Vestibulum nisi risus, euismod quis turpis</div>
             </div>
           </div>
+        </div>
         </div>
 
         <div className="chat-composer">

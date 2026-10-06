@@ -93,7 +93,7 @@ const addtoken = () => {
                         <div className="wall-set-item" onClick={() => handleOpenDrawer(true)}>
                             <div className="wall-set-icon-container">
                                 <div className="wall-set-icon">
-                                    <PhoneIcon size={22} color='#fff' />
+                                    <PhoneIcon size={16} color='#fff' />
                                 </div>
                                 <div className="wall-set-line"></div>
                             </div>
@@ -107,7 +107,7 @@ const addtoken = () => {
                         <div className="wall-set-item pending">
                             <div className="wall-set-icon-container">
                                 <div className="wall-set-icon">
-                                    <AccountIcon size={22} color='#fff' />
+                                    <AccountIcon size={16} color='#fff' />
                                 </div>
                             </div>
                             <Link href="/profile" className="wall-set-content">
@@ -125,7 +125,7 @@ const addtoken = () => {
                     <Link href="/mpin" className="set-acc-link mt-3">
                         <div>
                             <div>
-                                <LockIcon size={24} color="#fff" />
+                                <LockIcon size={16} color="#fff" />
                             </div>
                             <h6 className="subhead mb-0">MPIN</h6>
                         </div>
