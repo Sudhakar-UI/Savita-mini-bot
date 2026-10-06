@@ -336,6 +336,10 @@
       color: inherit;
     }
 
+    .settings-box .settings-icon svg {
+      color: #fff;
+    }
+
     .settings-box:after {
       content: "";
       background-color: #e8e8e8;
@@ -746,6 +750,10 @@
     .amount {
       font-size: 22px;
       font-weight: 600;
+    }
+
+    .amount-num {
+      height: 20px;
     }
 
     .amount-input {
@@ -3601,7 +3609,7 @@
 
     .progress-text {
       position: absolute;
-      font-size: 16px;
+      font-size: 14px;
       font-weight: bold;
       color: #888;
     }
@@ -4203,7 +4211,6 @@
 
     .nightmode .wall-set-item:nth-child(2) .wall-set-icon {
       background-color: #44a3dd;
-
     }
 
     .wall-set-line {
@@ -4257,17 +4264,27 @@
       color: #9A9899;
     }
 
-    .wall-set-item.active .wall-set-icon {
+    /* .wall-set-item.active .wall-set-icon {
       background-color: #34A357;
+    } */
+    .nightmode .wall-set-item.active .wall-set-icon,
+    .nightmode .wall-set-item.pending .wall-set-icon {
+      background-color: #44a3dd;
     }
+
+    .wall-set-item.active .wall-set-icon,
+    .wall-set-item.pending .wall-set-icon {
+      background-color: #11118b;
+    }
+
 
     .wall-set-item.active .wall-set-subtitle {
       color: #11118b;
     }
 
-    .wall-set-item.pending .wall-set-icon {
+    /* .wall-set-item.pending .wall-set-icon {
       background-color: #9A9899 !important;
-    }
+    } */
 
     .wall-set-item:first-child .wall-set-content,
     .wall-set-item:nth-child(2) .wall-set-content {
@@ -9230,7 +9247,7 @@
 
     .chat-nex-x {
       text-decoration: none;
-      color: #888;
+      color: #888 !important;
     }
 
     .confirm-bot-img {
@@ -12416,11 +12433,23 @@
 
 
     .support-input {
-      color: #fff !important;
+      color: #000 !important;
       box-shadow: none !important;
       background: #7f7f7f12 !important;
       border: 1px solid #d1cfcf80 !important;
       padding: 10px !important;
+    }
+
+    .verified-outer {
+      fill: #fff !important;
+    }
+
+    .security-cont>div:nth-child(2) svg path:last-child,.wall-set-icon>div:nth-child(2) svg path:last-child {
+      fill: #000 !important;
+    }
+
+    .nightmode .security-cont>div:nth-child(2) svg path:last-child {
+      fill: #44a3dd !important;
     }
 
     .nightmode .support-input {
@@ -12773,7 +12802,7 @@
     .chat-id {
       font-size: 14px;
       line-height: 1.2;
-      font-weight: 700;
+      font-weight: 600;
       letter-spacing: -0.04em;
       color: #888;
     }
@@ -12807,10 +12836,35 @@
     }
 
     .chat-thread {
-      display: flex;
       flex-direction: column;
       gap: 18px;
       padding-top: 2px;
+      display: flex;
+      max-height: 480px;
+      overflow-y: auto;
+      padding: 10px;
+
+      /* Firefox */
+      scrollbar-width: thin;
+      scrollbar-color: #888 transparent;
+    }
+
+    /* Chrome, Edge, Safari */
+    .chat-thread::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .chat-thread::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .chat-thread::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 10px;
+    }
+
+    .chat-thread::-webkit-scrollbar-thumb:hover {
+      background: #555;
     }
 
     .chat-message-row {
@@ -12871,8 +12925,9 @@
     }
 
     .chat-bubble-purple {
-      background: linear-gradient(180deg, #a66ce9 0%, #8f5fe3 100%);
-      background: linear-gradient(#00affe, #11118b);
+      /* background: linear-gradient(180deg, #a66ce9 0%, #8f5fe3 100%);
+      background: linear-gradient(#00affe, #11118b); */
+      background: #585858;
       color: #000;
     }
 
@@ -13013,19 +13068,39 @@
       position: relative;
     }
 
-    .withdraw-coin-select .form-select {
-      padding-left: 42px;
+    .withdraw-coin-dropdown-toggle.form-control {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 44px;
+      text-align: left;
+      color: inherit;
+    }
+
+    .withdraw-coin-dropdown-toggle::after {
+      margin-left: auto;
     }
 
     .withdraw-coin-icon {
-      position: absolute;
-      z-index: 1;
-      top: 50%;
-      left: 12px;
       width: 24px;
       height: 24px;
-      transform: translateY(-50%);
-      pointer-events: none;
+      flex-shrink: 0;
+    }
+
+    .withdraw-coin-menu {
+      width: 100%;
+    }
+
+    .withdraw-coin-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .withdraw-coin-option-icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
     }
 
     .withdraw-input .form-control {
@@ -13269,8 +13344,42 @@
       color: #ffa500 !important;
     }
 
+    .set-acc-link svg {
+      color: #fff;
+    }
 
+    .chat-container.container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 70vh;
+    }
 
+    .nightmode .withdraw-coin-select .dropdown-item.active {
+      background-color: #44a3dd !important;
+    }
+
+    .withdraw-coin-select .dropdown-item.active {
+      background-color: #44a3dd !important;
+    }
+
+    .dropdown-item:hover {
+      color: #000 !important;
+    }
+
+    .nightmode .withdraw-coin-select .dropdown-item.active {
+      color: #000 !important;
+
+    }
+
+    .nightmode .withdraw-coin-select .dropdown-item:hover {
+      color: #fff !important;
+    }
+
+    .withdraw-coin-select .dropdown-item.active {
+      color: #000 !important;
+
+    }
 
 
 
@@ -13429,6 +13538,9 @@
 
     @media (max-width: 600px) {
 
+      .chat-id {
+        font-size: 12px;
+      }
 
       .tradeRow {
         gap: 8px;
@@ -13683,6 +13795,14 @@
     }
 
     @media (max-width: 480px) {
+      .chat-status-pill {
+        min-height: 32px;
+        padding: 0 10px;
+        font-size: 12px;
+      }
+
+
+
       .verification-title {
         font-size: 16px;
       }
@@ -13782,9 +13902,20 @@
         align-items: start;
       }
 
+      .chat-message-row.outgoing {
+        align-items: end;
+      }
+
     }
 
     @media (max-width: 400px) {
+
+
+      .chat-header {
+        gap: 10px;
+        padding: 10px;
+        border-radius: 10px;
+      }
 
 
       .mert-sett-accuracy {
@@ -13816,6 +13947,10 @@
     }
 
     @media (max-width: 380px) {
+      .passcode-container.mt-4 {
+        margin-top: 10px !important;
+      }
+
       .mert-sett-step-line {
         margin-top: -11px;
       }
@@ -13843,8 +13978,13 @@
     }
 
     @media (max-width: 365px) {
+
       .sub-head {
         font-size: 12px;
+      }
+
+      .passcode-container h2.sub-head.txt-gry.mb-0 {
+        font-size: 14px;
       }
 
       .withdraw-page .setup-acc-info>div {
@@ -13860,6 +14000,10 @@
     @media(max-width: 340px) {
       .complete-content .heading {
         font-size: 20px;
+      }
+
+      .chat-id {
+        font-size: 11px;
       }
     }
 

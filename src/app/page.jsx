@@ -89,6 +89,7 @@ const addtoken = () => {
               <span className="dollr">$</span>
 
               <span className="amount">0</span>
+              <span className="  amount amount-num">*****</span>
 
               <FontAwesomeIcon icon={faEye} className="dollr eye-icon-y" />
             </h2>

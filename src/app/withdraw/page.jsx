@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useRef, useEffect } from 'react'
-import { Image, Container, Form, Row, Col, Button, InputGroup } from "react-bootstrap";
+import { Image, Container, Form, Row, Col, Button, InputGroup, Dropdown } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight, faCopy, faTimes } from "@fortawesome/free-solid-svg-icons";
 import RangeSlider from "./RangeSlider";
@@ -117,32 +117,84 @@ const addtoken = () => {
                                         <Form.Label>
                                             Select Crypto/Currency
                                         </Form.Label>
-                                        <div className="withdraw-coin-select">
-                                            <Image
-                                                src={COINS.find((coin) => coin.value === selectedCoin).icon}
-                                                alt={selectedCoin}
-                                                width={24}
-                                                height={24}
-                                                className="withdraw-coin-icon"
-                                            />
-                                            <Form.Select
-                                                className="form-control"
-                                                value={selectedCoin}
-                                                onChange={(event) => {
-                                                    const value = event.target.value;
-
-                                                    setSelectedCoin(value);
-
-                                                  
-                                                }}
+                                        <Dropdown
+                                            className="withdraw-coin-select"                                            
+                                        >
+                                            <Dropdown.Toggle
+                                                as="button"
+                                                type="button"
+                                                className="form-control withdraw-coin-dropdown-toggle"
                                             >
-                                                {COINS.map((coin) => (
-                                                    <option key={coin.value} value={coin.value}>
-                                                        {coin.symbol}
-                                                    </option>
-                                                ))}
-                                            </Form.Select>
-                                        </div>
+                                                <Image
+                                                    src="/assets/images/color/btc.svg"
+                                                    alt=""
+                                                    width={24}
+                                                    height={24}
+                                                    className="withdraw-coin-icon"
+                                                />
+                                                <span>BTC</span>
+                                            </Dropdown.Toggle>
+
+                                            <Dropdown.Menu className="withdraw-coin-menu">
+
+                                                <Dropdown.Item
+                                                    eventKey="btc"
+                                                    className="withdraw-coin-option"
+                                                >
+                                                    <Image
+                                                        src="/assets/images/color/btc.svg"
+                                                        alt=""
+                                                        width={24}
+                                                        height={24}
+                                                        className="withdraw-coin-option-icon"
+                                                    />
+                                                    <span>BTC</span>
+                                                </Dropdown.Item>
+
+                                                <Dropdown.Item
+                                                    eventKey="eth"
+                                                    className="withdraw-coin-option"
+                                                >
+                                                    <Image
+                                                        src="/assets/images/color/eth.svg"
+                                                        alt=""
+                                                        width={24}
+                                                        height={24}
+                                                        className="withdraw-coin-option-icon"
+                                                    />
+                                                    <span>ETH</span>
+                                                </Dropdown.Item>
+
+                                                <Dropdown.Item
+                                                    eventKey="ton"
+                                                    className="withdraw-coin-option"
+                                                >
+                                                    <Image
+                                                        src="/assets/images/color/ton.svg"
+                                                        alt=""
+                                                        width={24}
+                                                        height={24}
+                                                        className="withdraw-coin-option-icon"
+                                                    />
+                                                    <span>TON</span>
+                                                </Dropdown.Item>
+
+                                                <Dropdown.Item
+                                                    eventKey="usdc"
+                                                    className="withdraw-coin-option"
+                                                >
+                                                    <Image
+                                                        src="/assets/images/color/usdc.svg"
+                                                        alt=""
+                                                        width={24}
+                                                        height={24}
+                                                        className="withdraw-coin-option-icon"
+                                                    />
+                                                    <span>USDC</span>
+                                                </Dropdown.Item>
+
+                                            </Dropdown.Menu>
+                                        </Dropdown>
                                     </Form.Group>
                                     <Form.Group className="form-group mt-2">
                                         <Form.Group className="mb-2 mx-4">
