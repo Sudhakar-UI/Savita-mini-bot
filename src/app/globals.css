@@ -12318,7 +12318,7 @@
     }
 
     .support-ticket-id.text-end {
-     white-space: normal;
+      white-space: normal;
       overflow-wrap: anywhere;
       word-break: break-word;
       width: 35%;
@@ -13826,7 +13826,7 @@
       .chat-status-pill {
         min-height: 32px;
         padding: 0 10px;
-        font-size: 12px;
+        font-size: 11px;
       }
 
 
@@ -14192,3 +14192,149 @@
       text-decoration: none !important;
       cursor: pointer;
     }
+
+    /* ===== 2F verification popup ===== */
+    .twofa-popup {
+      padding: 4px 4px 8px;
+    }
+
+    .twofa-header {
+      justify-content: space-between;
+      align-items: center;
+      /* margin-top: 8px; */
+      display: flex;
+      height: 45px;
+    }
+
+    .twofa-title {
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.2;
+      margin: 0;
+      color: #111827;
+    }
+
+    .twofa-close-btn {
+      width: 36px;
+      height: 36px;
+      padding: 0 !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none !important;
+      border-radius: 50% !important;
+      background: #f1f3f9 !important;
+      color: #6b7280 !important;
+    }
+
+    .twofa-subtitle {
+      font-size: 14px;
+      line-height: 1.5;
+      color: #6b7280;
+      margin: 6px 0 18px;
+      padding-bottom: 5px;
+    }
+
+    .twofa-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .twofa-option {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px;
+      border: 1px solid #e5e7f0;
+      border-radius: 12px;
+      background: #ffffff;
+    }
+
+    .twofa-option-title {
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.3;
+      margin: 0;
+      color: #111827;
+    }
+
+    .twofa-option-desc {
+      font-size: 13px;
+      line-height: 1.3;
+      margin: 2px 0 0;
+      color: #6b7280;
+    }
+
+    .twofa-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 84px;
+      height: 38px;
+      padding: 0 14px !important;
+      font-size: 14px !important;
+      font-weight: 600 !important;
+      text-decoration: none !important;
+      color: #ffffff !important;
+      background-color: #11118b !important;
+      border: 1px solid #11118b !important;
+      border-radius: 10px !important;
+      flex: 0 0 auto;
+    }
+
+    .twofa-btn-block {
+      width: 100%;
+      height: 50px;
+      font-size: 16px !important;
+    }
+
+    /* ===== Night mode ===== */
+    .nightmode .twofa-title,
+    .nightmode .twofa-option-title {
+      color: #f2f4ff;
+    }
+
+  .nightmode .twofa-subtitle,
+.nightmode .twofa-option-desc {
+    color: #9fb0c3;
+}
+
+    .nightmode .twofa-option {
+         background: #2b394a;
+    border-color: #3a4a5e;
+    }
+
+    .nightmode .twofa-close-btn {
+         background: #2b394a !important;
+    color: #9fb0c3 !important;
+    }
+
+    .nightmode .twofa-btn {
+      color: #071033 !important;
+      background-color: #44a3dd !important;
+      border: 1px solid #44a3dd !important;
+    }
+
+ .twofa-btn.twofa-btn-block {
+    margin: 10px 0 !important;
+} 
+
+/* ===== Disabled button ===== */
+.twofa-btn.twofa-btn-disabled {
+    color: #8a90a8 !important;
+    background-color: #e3e6f2 !important;
+    border: 1px solid #e3e6f2 !important;
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+/* Night mode */
+.nightmode .twofa-btn.twofa-btn-disabled {
+    color: #6f7f93 !important;
+    background-color: #2b394a !important;
+    border: 1px solid #3a4a5e !important;
+}

@@ -17,7 +17,7 @@ export default function ChatPage() {
           </div>
         </div>
 
-        <div className="chat-thread">
+        {/* <div className="chat-thread">
           <div className="chat-message-row incoming">
             <div className="chat-avatar chat-avatar-1">J</div>
             <div className="chat-bubble chat-bubble-light">
@@ -53,7 +53,7 @@ export default function ChatPage() {
               <div className="chat-text">Vestibulum nisi risus, euismod quis turpis</div>
             </div>
           </div>
-        </div>
+        </div> */}
         </div>
 
         <div className="chat-composer">

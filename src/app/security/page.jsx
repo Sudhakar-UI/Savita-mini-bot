@@ -56,30 +56,35 @@ export default function Security() {
                 <div className='setup-passcode-page'>
                     <div className='px-2'>
                         <div className="phone-draw-handle"></div>
-                        <div className="text-center">
-                            <div className="phone-draw-close">
-                                <Button onClick={handleCloseDrawer} className="phone-draw-close-btn">
+
+                        <div className="twofa-popup">
+                            <div className="twofa-header">
+                                <h2 className="twofa-title">2F verification</h2>
+                                <Button onClick={handleCloseDrawer} className="twofa-close-btn" aria-label="Close">
                                     <FontAwesomeIcon icon={faTimes} />
                                 </Button>
                             </div>
-                        </div>
+                            <p className="twofa-subtitle">Add an extra layer of security to your account.</p>
 
-                        <div className="passcode-container mt-4">
-                            <h2 className="heading txt-gry">2F Verification</h2>
-                            <div className=' d-flex  justify-content-start flex-column gap-4'>
-                                <div className=' d-flex align-items-center justify-content-between'>
-                                    <h2 className='sub-head txt-gry mb-0'>Google Authentication</h2>
-                                    <Link href="/googleauth" className='btn sitebtn no-margin-x'>Enable</Link>
+                            <div className="twofa-list">
+                                <div className="twofa-option">
+                                    <div className="twofa-option-text">
+                                        <p className="twofa-option-title">Google Authentication</p>
+                                        <p className="twofa-option-desc">Use an authenticator app</p>
+                                    </div>
+                                    <Link href="/googleauth" className="twofa-btn">Enable</Link>
                                 </div>
-                                <div className=' d-flex align-items-center  justify-content-between'>
-                                    <h2 className='sub-head txt-gry mb-0'>
-                                        Email Verification</h2>
-                                    <Link href="/otp-verification" className='btn sitebtn no-margin-x'>Enable</Link>
+
+                                <div className="twofa-option">
+                                    <div className="twofa-option-text">
+                                        <p className="twofa-option-title">Email Verification</p>
+                                        <p className="twofa-option-desc">Get a code by email</p>
+                                    </div>
+                                    <Link href="/otp-verification" className="twofa-btn twofa-btn-disabled">Enable</Link>
                                 </div>
                             </div>
-                            <div className="mt-3">
-                                <Button className="sitebtn w-100" onClick={handleCloseDrawer}>Update</Button>
-                            </div>
+
+                            <Button className="twofa-btn twofa-btn-block" onClick={handleCloseDrawer}>Update</Button>
                         </div>
                     </div>
                 </div>
