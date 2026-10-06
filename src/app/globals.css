@@ -4211,6 +4211,7 @@
 
     .nightmode .wall-set-item:nth-child(2) .wall-set-icon {
       background-color: #44a3dd;
+
     }
 
     .wall-set-line {
@@ -12308,19 +12309,20 @@
       color: #fff;
     }
 
-.support-ticket-id {
-    font-size: 13px;
-    white-space: normal;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-    width: 50%;
-}
+    .support-ticket-id {
+      font-size: 13px;
+      white-space: normal;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      width: 50%;
+    }
 
-.support-ticket-id.text-end {
-    white-space: nowrap;
-    overflow-wrap: normal;
-    word-break: normal;
-}
+    .support-ticket-id.text-end {
+      white-space: nowrap;
+      overflow-wrap: normal;
+      word-break: normal;
+    }
+
     .support-ticket-status {
       font-size: 16px;
       font-weight: 700;
@@ -12453,8 +12455,7 @@
       fill: #fff !important;
     }
 
-    .security-cont>div:nth-child(2) svg path:last-child,
-    .wall-set-icon>div:nth-child(2) svg path:last-child {
+    .security-cont>div:nth-child(2) svg path:last-child {
       fill: #000 !important;
     }
 
@@ -12845,6 +12846,21 @@
       box-shadow: 0 0 0 3px rgba(49, 209, 122, 0.2);
     }
 
+    .chat-close-btn,
+    .chat-close-btn:hover,
+    .chat-close-btn:focus,
+    .chat-close-btn:active {
+      background: #dc3545 !important;
+      border-color: #dc3545 !important;
+      color: #fff !important;
+      box-shadow: none !important;
+    }
+
+    .chat-close-btn .chat-status-dot {
+      background: #fff;
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+    }
+
     .chat-thread {
       flex-direction: column;
       gap: 18px;
@@ -13095,6 +13111,7 @@
       width: 24px;
       height: 24px;
       flex-shrink: 0;
+      object-fit: contain;
     }
 
     .withdraw-coin-menu {
