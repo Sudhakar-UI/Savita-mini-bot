@@ -3511,6 +3511,14 @@
 
     .setup-acc-info p {
       color: #1E1E1E;
+      width: 50%;
+      max-width: 50%;
+      margin-left: auto;
+
+      white-space: normal;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      text-align: right;
     }
 
     .toggle-switch {
@@ -14297,19 +14305,19 @@
       color: #f2f4ff;
     }
 
-  .nightmode .twofa-subtitle,
-.nightmode .twofa-option-desc {
-    color: #9fb0c3;
-}
+    .nightmode .twofa-subtitle,
+    .nightmode .twofa-option-desc {
+      color: #9fb0c3;
+    }
 
     .nightmode .twofa-option {
-         background: #2b394a;
-    border-color: #3a4a5e;
+      background: #2b394a;
+      border-color: #3a4a5e;
     }
 
     .nightmode .twofa-close-btn {
-         background: #2b394a !important;
-    color: #9fb0c3 !important;
+      background: #2b394a !important;
+      color: #9fb0c3 !important;
     }
 
     .nightmode .twofa-btn {
@@ -14318,23 +14326,94 @@
       border: 1px solid #44a3dd !important;
     }
 
- .twofa-btn.twofa-btn-block {
-    margin: 10px 0 !important;
-} 
+    .twofa-btn.twofa-btn-block {
+      margin: 10px 0 !important;
+    }
 
-/* ===== Disabled button ===== */
-.twofa-btn.twofa-btn-disabled {
-    color: #8a90a8 !important;
-    background-color: #e3e6f2 !important;
-    border: 1px solid #e3e6f2 !important;
-    cursor: not-allowed;
-    pointer-events: none;
+    /* ===== Disabled button ===== */
+    .twofa-btn.twofa-btn-disabled {
+      color: #8a90a8 !important;
+      background-color: #e3e6f2 !important;
+      border: 1px solid #e3e6f2 !important;
+      cursor: not-allowed;
+      pointer-events: none;
+      opacity: 0.8;
+    }
+
+    /* Night mode */
+    .nightmode .twofa-btn.twofa-btn-disabled {
+      color: #6f7f93 !important;
+      background-color: #2b394a !important;
+      border: 1px solid #3a4a5e !important;
+    }
+
+    .his-wrap-text {
+    width: 80%;
+    max-width: 80%;
+    margin-left: auto;
+
+    color: #1e1e1e;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    text-align: right;
+}
+
+.his-wrap-textt {
+    width: 90%;
+    max-width: 90%;
+    /* margin-left: auto; */
+
+    color: #1e1e1e;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    text-align: left;
+}
+
+.trade-his-page p {
+    color: #686973 !important;
+}
+
+.nightmode .trade-his-page p {
+    color: #d6d6d6 !important;
+}
+
+.btc-address-wrap {
+    position: relative;
+}
+
+.btc-address-input {
+    padding-right: 90px !important; /* text icons kela povaama irukka */
+}
+
+.btc-address-icons {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btc-address-iconbtn {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #6b7280; /* light theme */
+}
+
+.btc-address-iconbtn:hover {
     opacity: 0.8;
 }
 
-/* Night mode */
-.nightmode .twofa-btn.twofa-btn-disabled {
-    color: #6f7f93 !important;
-    background-color: #2b394a !important;
-    border: 1px solid #3a4a5e !important;
+/* Dark theme - unga theme class/attribute-ku match panni maathikonga */
+[data-theme="dark"] .btc-address-iconbtn,
+.dark .btc-address-iconbtn {
+    color: #9aa4b2;
 }
