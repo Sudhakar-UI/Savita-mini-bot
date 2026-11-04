@@ -502,8 +502,9 @@ const addtoken = () => {
                           <p className="text-end">
                             Sender
                           </p>
-                          <h4 className="text-end">
-                            {deposit.sender}
+                          <h4 className="text-end his-wrap-text">
+                            {/* {deposit.sender} */}
+                            156468484111211111111111111111111111111111111111654888
                           </h4>
                         </div>
                       </div>
@@ -512,8 +513,9 @@ const addtoken = () => {
                       <div className="history-table-maindiv">
                         <div>
                           <p>Txn Id</p>
-                          <h4>
-                            {deposit.txnId}
+                          <h4 className="his-wrap-textt">
+                            {/* {deposit.txnId} */}
+                                156468484111211111111111111111111111111111111111654888
                             <FontAwesomeIcon
                               icon={faCopy}
                               className="ms-2"
@@ -525,8 +527,9 @@ const addtoken = () => {
                           <p className="text-end">
                             Receiver
                           </p>
-                          <h4 className="text-end">
-                            {deposit.receiver}
+                          <h4 className="text-end his-wrap-text">
+                            {/* {deposit.receiver} */}
+                                156468484111211111111111111111111111111111111111654888
                             <FontAwesomeIcon
                               icon={faCopy}
                               className="ms-2"
@@ -648,8 +651,9 @@ const addtoken = () => {
                             Txn Id
                           </p>
 
-                          <h4 className="text-end">
-                            {withdraw.txnId}
+                          <h4 className="text-end his-wrap-text">
+                            {/* {withdraw.txnId} */}
+                            1111111111111111111111111111111111111111111111111111111111111111111111
 
                             <FontAwesomeIcon
                               icon={faCopy}
@@ -664,8 +668,9 @@ const addtoken = () => {
                         <div>
                           <p>Sender</p>
 
-                          <h4>
-                            {withdraw.sender}
+                          <h4 className="his-wrap-textt">
+                            15614898888888888888888888888888888986478974
+                            {/* {withdraw.sender} */}
 
                             <FontAwesomeIcon
                               icon={faCopy}
